@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+body {
+    background: url("assets/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    border-radius: 30px;
+    padding: 40px;
+
+    color: white;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.text {
+    padding: 30px;
+    align-content: center;
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header */
+header {
+    display: inline;
+}
+.kepala {
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    position: sticky;
+    top: 0px;
+}
+.nav-bar {
+    padding: 30px;
+    padding-left: 50px;
+}
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 30px;
+}
+
+
+
+
+
+
+/* Main */
+/* Icon */
+.icon {
+    padding: 40px;
+}
+.patung {
+    max-height: 500px;
+    width: auto;
+}
+
+/* Biografi */
+.biografi {
+    padding: 40px;
+}
+
+
+
+
+
+
+/* Perang */
+.perang {
+    padding: 40px;
+}
+
+/* Bagelan */
+.bagelan {
+    max-width: 300px;
+    max-height: 700px;
+}
+
+.tegalrejo {
+    max-width: 300px;
+    max-height: 700px;
+}
+
+
+
+
+
+/* Aside */
+.profile {
+    text-align: center;
+}
+
+
+
+
+/* Formating Aside Nih */
+#content{
+    float: left;
+    width: 75%;
+}
+
+aside{
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+
+/* Footer */
+footer{
+    padding: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/* Biar ketika kurang dari 1200px Asidenya kebawah */
+@media screen and (max-width: 1200px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
