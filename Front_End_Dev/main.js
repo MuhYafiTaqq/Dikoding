@@ -64,10 +64,10 @@ function hapusBook (id) {
 function addData (id, judul, penulis, tahun, selesai) {
     return {
         id,
-        judul,
-        penulis,
-        tahun,
-        selesai,
+        title: judul,
+        author: penulis,
+        year: Number(tahun),
+        isComplete: selesai,
     }
 }
 
@@ -93,15 +93,14 @@ function renderBook() {
         newItems.setAttribute('data-testid', `bookItem`);
 
         newItems.innerHTML = `
-            <h3 data-testid="bookItemTitle">${book.judul}</h3>
-            <p data-testid="bookItemAuthor">Penulis: ${book.penulis}</p>
-            <p data-testid="bookItemYear">Tahun: ${book.tahun}</p>
+            <h3 data-testid="bookItemTitle">${book.title}</h3>
+            <p data-testid="bookItemAuthor">Penulis: ${book.author}</p>
+            <p data-testid="bookItemYear">Tahun: ${book.year}</p>
 
             <div>
                 <button data-testid="bookItemIsCompleteButton" class="selesaiBaca">Selesai Baca</button>
 
                 <button data-testid="bookItemDeleteButton" class="hapusButton">Hapus</button>
-                <button data-testid="bookItemEditButton">Edit Buku</button>
             </div>
         `;
 
