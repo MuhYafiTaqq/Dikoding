@@ -47,7 +47,7 @@ function selesaiBaca (id) {
     const bookIndex = data.findIndex(book => book.id === id);
     
     if (bookIndex !== -1) {
-        data[bookIndex].selesai = !data[bookIndex].selesai;
+        data[bookIndex].isComplete = !data[bookIndex].isComplete;
         localStorage.setItem(pasKeys, JSON.stringify(data));
         renderBook();
     }
@@ -89,8 +89,8 @@ function renderBook() {
 
     data.forEach(function(book) {
         const newItems = document.createElement('div');
-        newItems.setAttribute('data-bookid', `${book.id}`);
-        newItems.setAttribute('data-testid', `bookItem`);
+        newItems.setAttribute('data-bookid', book.id);
+        newItems.setAttribute('data-testid', "bookItem");
 
         newItems.innerHTML = `
             <h3 data-testid="bookItemTitle">${book.title}</h3>
@@ -116,7 +116,7 @@ function renderBook() {
             hapusBook(hapusId);
         });
 
-        if (book.selesai === true) {
+        if (book.isComplete === true) {
             completeList.appendChild(newItems);
         } else {
             inCompleteList.appendChild(newItems);
